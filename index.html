@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="app-container" class="bg-default">
+        <div id="loader"></div>
+        <main id="weather-content" class="hidden">
+            <!-- Left Panel -->
+            <section class="main-panel">
+                <div class="search-and-title">
+                    <form id="search-form">
+                        <input type="text" id="search-input" placeholder="Search for any city..." required>
+                        <button type="submit">Search</button>
+                    </form>
+                    <h1 id="city-name">Pune</h1>
+                    <p id="current-date">Wednesday, 17 Sep</p>
+                </div>
+
+                <div class="current-weather-summary">
+                    <div class="temp-and-icon">
+                        <p id="current-temp">25°</p>
+                        <img id="current-icon" src="https://openweathermap.org/img/wn/04d@2x.png" alt="weather icon">
+                    </div>
+                    <div class="desc-and-highlow">
+                        <p id="current-desc">Cloudy</p>
+                        <p>H:<span id="today-high">29</span>° / L:<span id="today-low">22</span>°</p>
+                    </div>
+                </div>
+
+                <div class="hourly-forecast">
+                    <canvas id="hourly-chart"></canvas>
+                </div>
+                 
+                <div class="daily-forecast-container">
+                    <h2>5-Day Forecast</h2>
+                    <div class="daily-forecast">
+                        <!-- Daily cards injected by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Panel -->
+            <section class="details-panel">
+                <div class="widget wind-widget">
+                    <h3>Wind</h3>
+                    <div class="widget-content">
+                        <div class="compass">
+                            <div id="wind-arrow" class="wind-arrow"></div>
+                        </div>
+                        <p><span id="wind-speed">15</span> km/h</p>
+                        <p>Gusts: <span id="wind-gust">25</span> km/h</p>
+                    </div>
+                </div>
+                <div class="widget sun-widget">
+                    <h3>Sunrise & Sunset</h3>
+                    <div class="widget-content">
+                        <div class="sun-path">
+                            <div id="sun-icon-wrapper" class="sun-icon-wrapper">
+                                <span class="sun-icon">☀️</span>
+                            </div>
+                        </div>
+                        <div class="sun-times">
+                            <p id="sunrise-time">06:21 AM</p>
+                            <p id="sunset-time">06:38 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget humidity-widget">
+                     <h3>Humidity</h3>
+                     <p><span id="humidity">75</span>%</p>
+                     <p>Dew point: <span id="dew-point">22</span>°</p>
+                </div>
+                 <div class="widget visibility-widget">
+                     <h3>Visibility</h3>
+                     <p><span id="visibility">10</span> km</p>
+                     <p id="visibility-desc">Excellent</p>
+                </div>
+                <div class="widget pressure-widget">
+                     <h3>Pressure</h3>
+                     <p><span id="pressure">1009</span> mb</p>
+                </div>
+                <div class="widget aqi-widget">
+                    <h3>Air Quality</h3>
+                    <div class="aqi-gauge">
+                        <div class="aqi-fill"></div>
+                        <div class="aqi-cover">
+                            <span id="aqi-value">2</span>
+                        </div>
+                    </div>
+                    <p id="aqi-desc">Fair</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
