@@ -1,4 +1,4 @@
-Pro Weather Dashboard
+Dynamic Weather Dashboard
 A modern, responsive, and data-rich weather dashboard application built with vanilla JavaScript, HTML, and CSS. This project provides real-time weather information for any city in the world, architected with a secure, serverless backend to protect the API key.
 
 Live Demo: https://dynamicweatherdashboard.netlify.app/
