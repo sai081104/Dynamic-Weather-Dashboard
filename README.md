@@ -61,7 +61,7 @@ To run this project on your local machine, you'll need to have Node.js and the N
 
 1. Clone the repository:
 
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+git clone [https://github.com/sai081104/dynamic-weather-dashboard-2]
 cd your-repo-name
 
 2. Install project dependencies:
